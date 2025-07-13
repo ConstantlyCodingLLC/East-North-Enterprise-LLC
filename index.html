@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,154 +6,149 @@
   <title>East North Enterprise LLC</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: #f5f5f5;
-      color: #333;
+      background-color: #ffffff;
+      color: #1f2937;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1597072688513-3ed5f53be94a') center/cover no-repeat;
+      background-color: #0f172a;
       color: white;
-      padding: 100px 20px 60px;
+      padding: 80px 20px 40px;
       text-align: center;
-      position: relative;
     }
     nav {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+      background: #1e293b;
+      padding: 15px;
+      text-align: center;
     }
     nav a {
       color: white;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
-      background: rgba(0,0,0,0.4);
-      padding: 10px 15px;
-      border-radius: 6px;
     }
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin: auto;
-    }
-    .quote-box {
-      background: white;
+    .quote-form {
+      background: #f9fafb;
       padding: 20px;
       border-radius: 10px;
       max-width: 500px;
-      margin: 40px auto 0;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 30px auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
-    input, textarea {
+    .quote-form input,
+    .quote-form textarea {
       width: 100%;
       padding: 10px;
-      margin-top: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 4px;
     }
-    button {
-      background-color: #1e3a8a;
+    .quote-form button {
+      background-color: #1d4ed8;
       color: white;
-      padding: 10px 20px;
+      padding: 10px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
-      margin-top: 10px;
+      font-weight: bold;
     }
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
-    .services {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
-    .service-card {
-      background: white;
+    .card {
+      background: #f1f5f9;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
     }
-    .service-card h3 {
-      color: #1e3a8a;
+    .card h3 {
+      color: #1d4ed8;
+      margin-bottom: 10px;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #1e3a8a;
+      background: #0f172a;
       color: white;
+      padding: 30px 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="hero">
-      <h1>East North Enterprise LLC</h1>
-      <p>Your Trusted Partner for Lawn Care & Home Improvement in SC</p>
-    </div>
-    <div class="quote-box">
-      <h3>Request a Quote</h3>
-      <form>
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Phone Number" />
-        <textarea placeholder="Describe your project..." rows="4"></textarea>
-        <button type="submit">Send Request</button>
-      </form>
-    </div>
-  </header>
 
-  <section id="services">
-    <h2>Our Core Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Lawn Mowing</h3>
-        <p>Keep your yard clean and healthy with regular lawn mowing services.</p>
-      </div>
-      <div class="service-card">
-        <h3>Edging & Trimming</h3>
-        <p>Sharp, clean edges for your sidewalks and flower beds.</p>
-      </div>
-      <div class="service-card">
-        <h3>Weed Control</h3>
-        <p>Protect your lawn from invasive weeds with our expert treatments.</p>
-      </div>
-      <div class="service-card">
-        <h3>Leaf Removal</h3>
-        <p>Keep your property clear of leaves and debris year-round.</p>
-      </div>
-      <div class="service-card">
-        <h3>Mulching</h3>
-        <p>Enhance appearance, retain moisture, and reduce weed growth.</p>
-      </div>
-      <div class="service-card">
-        <h3>Yard Cleanup</h3>
-        <p>Spring or fall – we clear and refresh your outdoor spaces.</p>
-      </div>
-    </div>
-  </section>
+<header>
+  <h1>East North Enterprise LLC</h1>
+  <p>Professional Lawn Care & Home Remodeling in South Carolina</p>
+</header>
 
-  <footer>
-    <p>East North Enterprise LLC &copy; 2025 | thedjbenterprise@gmail.com</p>
-  </footer>
+<nav>
+  <a href="#lawn">Lawn Services</a>
+  <a href="#remodel">Home Remodeling</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="quote-form">
+  <h2 style="text-align:center;">Request a Quote</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email Address" required />
+    <input type="tel" placeholder="Phone Number" />
+    <textarea placeholder="Describe your project..." rows="4"></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+</section>
+
+<section id="lawn">
+  <h2 style="text-align:center;">Lawn Care Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Lawn Mowing</h3><p>Regular mowing to maintain the desired grass height.</p></div>
+    <div class="card"><h3>Edging & Trimming</h3><p>Clean edges for sidewalks and flower beds.</p></div>
+    <div class="card"><h3>Weed Control</h3><p>Targeted treatments to eliminate unwanted weeds.</p></div>
+    <div class="card"><h3>Leaf Removal</h3><p>Clearing fallen leaves from lawn and garden.</p></div>
+    <div class="card"><h3>Mulching</h3><p>Fresh mulch for beds to retain moisture and reduce weeds.</p></div>
+    <div class="card"><h3>Yard Cleanup</h3><p>Remove debris and prepare your yard for the season.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Additional Lawn Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Lawn Fertilization</h3><p>Boost grass health with seasonal fertilization.</p></div>
+    <div class="card"><h3>Lawn Aeration</h3><p>Improve soil airflow with mechanical aeration.</p></div>
+    <div class="card"><h3>Overseeding</h3><p>Thicken your lawn with new seed growth.</p></div>
+    <div class="card"><h3>Dethatching</h3><p>Remove buildup to allow grass to breathe.</p></div>
+    <div class="card"><h3>Pest Control</h3><p>Protect your lawn from insects and grubs.</p></div>
+    <div class="card"><h3>Tree & Shrub Pruning</h3><p>Shape and maintain your trees and shrubs.</p></div>
+    <div class="card"><h3>Planting</h3><p>New shrubs, trees, flowers, and more.</p></div>
+    <div class="card"><h3>Irrigation Systems</h3><p>Install & maintain automatic sprinkler systems.</p></div>
+    <div class="card"><h3>Hardscaping</h3><p>Walkways, patios, and retaining walls built to last.</p></div>
+    <div class="card"><h3>Seasonal Cleanups</h3><p>Spring and fall full-yard cleanups.</p></div>
+  </div>
+</section>
+
+<section id="remodel">
+  <h2 style="text-align:center;">Home Remodeling Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Kitchen Remodeling</h3><p>Cabinets, countertops, appliances, and flooring upgrades.</p></div>
+    <div class="card"><h3>Bathroom Remodeling</h3><p>Shower, vanity, toilet, lighting, and tile installation.</p></div>
+    <div class="card"><h3>Basement Finishing</h3><p>Turn your basement into livable space.</p></div>
+    <div class="card"><h3>Room Additions</h3><p>Expand your home with new rooms or extensions.</p></div>
+    <div class="card"><h3>Flooring Installation</h3><p>Hardwood, tile, laminate, carpet, and more.</p></div>
+    <div class="card"><h3>General Interior Renovation</h3><p>Paint, trim, drywall, and cosmetic improvements.</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>East North Enterprise LLC &copy; 2025 | thedjbenterprise@gmail.com</p>
+</footer>
+
 </body>
 </html>
