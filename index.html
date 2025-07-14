@@ -6,34 +6,46 @@
   <title>East North Enterprise LLC</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --main-blue: #1d4ed8;
+      --dark-blue: #0f172a;
+      --light-bg: #f1f5f9;
+      --text-dark: #1f2937;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #ffffff;
-      color: #1f2937;
+      color: var(--text-dark);
     }
     header {
-      background-color: #0f172a;
+      background-color: var(--dark-blue);
       color: white;
-      padding: 80px 20px 40px;
+      padding: 60px 20px 30px;
       text-align: center;
     }
     nav {
       background: #1e293b;
       padding: 15px;
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 8px 15px;
       font-weight: bold;
     }
     .quote-form {
       background: #f9fafb;
       padding: 20px;
       border-radius: 10px;
-      max-width: 500px;
+      max-width: 600px;
       margin: 30px auto;
       box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
@@ -46,18 +58,24 @@
       border: 1px solid #ccc;
     }
     .quote-form button {
-      background-color: #1d4ed8;
+      background-color: var(--main-blue);
       color: white;
       padding: 10px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
+      width: 100%;
     }
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--main-blue);
     }
     .grid {
       display: grid;
@@ -65,20 +83,51 @@
       gap: 20px;
     }
     .card {
-      background: #f1f5f9;
+      background: var(--light-bg);
       padding: 20px;
       border-radius: 8px;
       border: 1px solid #e2e8f0;
     }
     .card h3 {
-      color: #1d4ed8;
+      color: var(--main-blue);
       margin-bottom: 10px;
+    }
+    details {
+      background-color: #f9fafb;
+      border: 1px solid #dbeafe;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    details summary {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: var(--main-blue);
+      cursor: pointer;
+    }
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+    }
+    details summary::after {
+      content: "▼";
+      float: right;
     }
     footer {
       text-align: center;
-      background: #0f172a;
+      background: var(--dark-blue);
       color: white;
       padding: 30px 20px;
+    }
+    footer a {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -96,7 +145,7 @@
 </nav>
 
 <section class="quote-form">
-  <h2 style="text-align:center;">Request a Quote</h2>
+  <h2>Request a Quote</h2>
   <form>
     <input type="text" placeholder="Full Name" required />
     <input type="email" placeholder="Email Address" required />
@@ -107,7 +156,7 @@
 </section>
 
 <section id="lawn">
-  <h2 style="text-align:center;">Lawn Care Services</h2>
+  <h2>Lawn Care Services</h2>
   <div class="grid">
     <div class="card"><h3>Lawn Mowing</h3><p>Regular mowing to maintain the desired grass height.</p></div>
     <div class="card"><h3>Edging & Trimming</h3><p>Clean edges for sidewalks and flower beds.</p></div>
@@ -116,26 +165,26 @@
     <div class="card"><h3>Mulching</h3><p>Fresh mulch for beds to retain moisture and reduce weeds.</p></div>
     <div class="card"><h3>Yard Cleanup</h3><p>Remove debris and prepare your yard for the season.</p></div>
   </div>
-</section>
 
-<section>
-  <h2 style="text-align:center;">Additional Lawn Services</h2>
-  <div class="grid">
-    <div class="card"><h3>Lawn Fertilization</h3><p>Boost grass health with seasonal fertilization.</p></div>
-    <div class="card"><h3>Lawn Aeration</h3><p>Improve soil airflow with mechanical aeration.</p></div>
-    <div class="card"><h3>Overseeding</h3><p>Thicken your lawn with new seed growth.</p></div>
-    <div class="card"><h3>Dethatching</h3><p>Remove buildup to allow grass to breathe.</p></div>
-    <div class="card"><h3>Pest Control</h3><p>Protect your lawn from insects and grubs.</p></div>
-    <div class="card"><h3>Tree & Shrub Pruning</h3><p>Shape and maintain your trees and shrubs.</p></div>
-    <div class="card"><h3>Planting</h3><p>New shrubs, trees, flowers, and more.</p></div>
-    <div class="card"><h3>Irrigation Systems</h3><p>Install & maintain automatic sprinkler systems.</p></div>
-    <div class="card"><h3>Hardscaping</h3><p>Walkways, patios, and retaining walls built to last.</p></div>
-    <div class="card"><h3>Seasonal Cleanups</h3><p>Spring and fall full-yard cleanups.</p></div>
-  </div>
+  <details>
+    <summary>View Additional Lawn Services</summary>
+    <div class="grid" style="margin-top: 20px;">
+      <div class="card"><h3>Lawn Fertilization</h3><p>Boost grass health with seasonal fertilization.</p></div>
+      <div class="card"><h3>Lawn Aeration</h3><p>Improve soil airflow with mechanical aeration.</p></div>
+      <div class="card"><h3>Overseeding</h3><p>Thicken your lawn with new seed growth.</p></div>
+      <div class="card"><h3>Dethatching</h3><p>Remove buildup to allow grass to breathe.</p></div>
+      <div class="card"><h3>Pest Control</h3><p>Protect your lawn from insects and grubs.</p></div>
+      <div class="card"><h3>Tree & Shrub Pruning</h3><p>Shape and maintain your trees and shrubs.</p></div>
+      <div class="card"><h3>Planting</h3><p>New shrubs, trees, flowers, and more.</p></div>
+      <div class="card"><h3>Irrigation Systems</h3><p>Install & maintain automatic sprinkler systems.</p></div>
+      <div class="card"><h3>Hardscaping</h3><p>Walkways, patios, and retaining walls built to last.</p></div>
+      <div class="card"><h3>Seasonal Cleanups</h3><p>Spring and fall full-yard cleanups.</p></div>
+    </div>
+  </details>
 </section>
 
 <section id="remodel">
-  <h2 style="text-align:center;">Home Remodeling Services</h2>
+  <h2>Home Remodeling Services</h2>
   <div class="grid">
     <div class="card"><h3>Kitchen Remodeling</h3><p>Cabinets, countertops, appliances, and flooring upgrades.</p></div>
     <div class="card"><h3>Bathroom Remodeling</h3><p>Shower, vanity, toilet, lighting, and tile installation.</p></div>
@@ -147,7 +196,7 @@
 </section>
 
 <footer>
-  <p>East North Enterprise LLC &copy; 2025 | thedjbenterprise@gmail.com</p>
+  <p>East North Enterprise LLC &copy; 2025 | <a href="mailto:thedjbenterprise@gmail.com">thedjbenterprise@gmail.com</a></p>
 </footer>
 
 </body>
