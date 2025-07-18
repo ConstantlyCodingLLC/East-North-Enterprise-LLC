@@ -112,6 +112,27 @@
       height: 200px;
       object-fit: cover;
       display: block;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    /* Staggered fade-in for images */
+    .photo-demo figure:nth-child(1) img {
+      animation-delay: 0.2s;
+    }
+    .photo-demo figure:nth-child(2) img {
+      animation-delay: 0.4s;
+    }
+    .photo-demo figure:nth-child(3) img {
+      animation-delay: 0.6s;
+    }
+    .photo-demo figure:nth-child(4) img {
+      animation-delay: 0.8s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     .photo-demo figcaption {
@@ -170,7 +191,6 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- Moved Additional Services up near header -->
 <section class="additional-services">
   <label for="services-dropdown">Explore Additional Services</label>
   <select id="services-dropdown" onchange="if(this.value) window.location.href=this.value;">
