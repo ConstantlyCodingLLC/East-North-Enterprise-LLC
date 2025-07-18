@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>East North Enterprise LLC</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
@@ -40,16 +40,10 @@
       letter-spacing: 0.5px;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    /* Dropdown container */
+    /* Moved dropdown container closer to header */
     .additional-services {
       max-width: 400px;
-      margin: 40px auto 60px;
+      margin: 20px auto 60px;
       text-align: center;
     }
 
@@ -68,6 +62,12 @@
       border: 1px solid #ccc;
       font-size: 16px;
       cursor: pointer;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .grid {
@@ -89,7 +89,7 @@
       margin-bottom: 10px;
     }
 
-    /* Photo demonstrations */
+    /* Photo demos */
     .photo-demo {
       max-width: 1100px;
       margin: 30px auto 60px;
@@ -127,6 +127,35 @@
       color: white;
       padding: 30px 20px;
     }
+
+    /* Responsive text sizing for smaller screens */
+    @media (max-width: 480px) {
+      header {
+        padding: 60px 15px 40px;
+      }
+      header img {
+        max-width: 140px;
+      }
+      nav a {
+        font-size: 14px;
+        margin: 0 10px;
+      }
+      .additional-services label {
+        font-size: 16px;
+      }
+      .additional-services select {
+        font-size: 14px;
+      }
+      section {
+        padding: 40px 15px;
+      }
+      .card h3 {
+        font-size: 18px;
+      }
+      .photo-demo img {
+        height: 160px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -138,12 +167,10 @@
 </header>
 
 <nav>
-  <a href="#lawn">Lawn Services</a>
-  <a href="#remodel">Home Remodeling</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- Additional Services Dropdown -->
+<!-- Moved Additional Services up near header -->
 <section class="additional-services">
   <label for="services-dropdown">Explore Additional Services</label>
   <select id="services-dropdown" onchange="if(this.value) window.location.href=this.value;">
@@ -171,7 +198,6 @@
   </div>
 </section>
 
-<!-- Lawn Care Photo Demonstrations -->
 <section class="photo-demo" aria-label="Lawn Care Photo Demonstrations">
   <figure>
     <img src="images/lawn-mowing.jpg" alt="Lawn mowing service in action" />
@@ -219,7 +245,6 @@
   </div>
 </section>
 
-<!-- Remodeling Photo Demonstrations -->
 <section class="photo-demo" aria-label="Home Remodeling Photo Demonstrations">
   <figure>
     <img src="images/kitchen-remodel.jpg" alt="Modern kitchen remodeling" />
