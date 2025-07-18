@@ -46,33 +46,28 @@
       margin: auto;
     }
 
-    .quote-form {
-      background: #f9fafb;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: 40px auto;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    /* Dropdown container */
+    .additional-services {
+      max-width: 400px;
+      margin: 40px auto 60px;
+      text-align: center;
     }
 
-    .quote-form input,
-    .quote-form textarea {
+    .additional-services label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #1d4ed8;
+    }
+
+    .additional-services select {
       width: 100%;
       padding: 12px;
-      margin: 10px 0;
       border-radius: 6px;
       border: 1px solid #ccc;
-    }
-
-    .quote-form button {
-      background-color: #1d4ed8;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
+      font-size: 16px;
       cursor: pointer;
-      font-weight: bold;
-      width: 100%;
     }
 
     .grid {
@@ -92,6 +87,38 @@
     .card h3 {
       color: #1d4ed8;
       margin-bottom: 10px;
+    }
+
+    /* Photo demonstrations */
+    .photo-demo {
+      max-width: 1100px;
+      margin: 30px auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .photo-demo figure {
+      margin: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+
+    .photo-demo img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-demo figcaption {
+      padding: 12px;
+      font-weight: 600;
+      color: #1d4ed8;
+      background: #f9fafb;
     }
 
     footer {
@@ -116,15 +143,20 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<section class="quote-form">
-  <h2 style="text-align:center;">Request a Quote</h2>
-  <form>
-    <input type="text" placeholder="Full Name" required />
-    <input type="email" placeholder="Email Address" required />
-    <input type="tel" placeholder="Phone Number" />
-    <textarea placeholder="Describe your project..." rows="4"></textarea>
-    <button type="submit">Send Request</button>
-  </form>
+<!-- Additional Services Dropdown -->
+<section class="additional-services">
+  <label for="services-dropdown">Explore Additional Services</label>
+  <select id="services-dropdown" onchange="if(this.value) window.location.href=this.value;">
+    <option value="">Select a service...</option>
+    <option value="#lawn">Lawn Services Overview</option>
+    <option value="#remodel">Home Remodeling Overview</option>
+    <option value="#lawn">Lawn Fertilization</option>
+    <option value="#lawn">Lawn Aeration</option>
+    <option value="#lawn">Pest Control</option>
+    <option value="#remodel">Kitchen Remodeling</option>
+    <option value="#remodel">Bathroom Remodeling</option>
+    <option value="#remodel">Basement Finishing</option>
+  </select>
 </section>
 
 <section id="lawn">
@@ -137,6 +169,26 @@
     <div class="card"><h3>Mulching</h3><p>Fresh mulch for beds to retain moisture and reduce weeds.</p></div>
     <div class="card"><h3>Yard Cleanup</h3><p>Remove debris and prepare your yard for the season.</p></div>
   </div>
+</section>
+
+<!-- Lawn Care Photo Demonstrations -->
+<section class="photo-demo" aria-label="Lawn Care Photo Demonstrations">
+  <figure>
+    <img src="images/lawn-mowing.jpg" alt="Lawn mowing service in action" />
+    <figcaption>Lawn Mowing</figcaption>
+  </figure>
+  <figure>
+    <img src="images/edging-trimming.jpg" alt="Clean edging and trimming around sidewalks" />
+    <figcaption>Edging & Trimming</figcaption>
+  </figure>
+  <figure>
+    <img src="images/mulching.jpg" alt="Fresh mulch in garden beds" />
+    <figcaption>Mulching</figcaption>
+  </figure>
+  <figure>
+    <img src="images/leaf-removal.jpg" alt="Clearing leaves from yard" />
+    <figcaption>Leaf Removal</figcaption>
+  </figure>
 </section>
 
 <section>
@@ -165,6 +217,26 @@
     <div class="card"><h3>Flooring Installation</h3><p>Hardwood, tile, laminate, carpet, and more.</p></div>
     <div class="card"><h3>General Interior Renovation</h3><p>Paint, trim, drywall, and cosmetic improvements.</p></div>
   </div>
+</section>
+
+<!-- Remodeling Photo Demonstrations -->
+<section class="photo-demo" aria-label="Home Remodeling Photo Demonstrations">
+  <figure>
+    <img src="images/kitchen-remodel.jpg" alt="Modern kitchen remodeling" />
+    <figcaption>Kitchen Remodeling</figcaption>
+  </figure>
+  <figure>
+    <img src="images/bathroom-remodel.jpg" alt="Stylish bathroom remodel" />
+    <figcaption>Bathroom Remodeling</figcaption>
+  </figure>
+  <figure>
+    <img src="images/basement-finishing.jpg" alt="Finished basement living space" />
+    <figcaption>Basement Finishing</figcaption>
+  </figure>
+  <figure>
+    <img src="images/room-additions.jpg" alt="Room addition exterior view" />
+    <figcaption>Room Additions</figcaption>
+  </figure>
 </section>
 
 <footer>
