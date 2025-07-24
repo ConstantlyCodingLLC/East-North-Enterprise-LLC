@@ -16,19 +16,34 @@
     header {
       background-color: #002e1a;
       color: #d4af37;
-      padding: 100px 20px 60px;
+      padding: 140px 20px 60px; /* increased top padding */
       text-align: center;
+      position: relative; /* for absolute positioning inside */
     }
 
-    header img {
-      max-width: 160px;
-      margin-bottom: 20px;
+    .logo-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: inline-block;
+    }
+
+    .logo-link img {
+      max-width: 80px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      display: block;
+    }
+
+    .logo-link img:hover {
+      opacity: 0.8;
     }
 
     header h1 {
       font-size: 2.5em;
       font-weight: 700;
       letter-spacing: 1px;
+      margin: 0;
     }
 
     header p {
@@ -151,11 +166,16 @@
 
     @media (max-width: 480px) {
       header {
-        padding: 60px 15px 40px;
+        padding: 100px 15px 40px;
       }
 
-      header img {
-        max-width: 140px;
+      .logo-link {
+        top: 10px;
+        right: 10px;
+      }
+
+      .logo-link img {
+        max-width: 60px;
       }
 
       nav a {
@@ -187,9 +207,11 @@
 </head>
 <body>
 <header>
+  <a href="/" class="logo-link" aria-label="Go to home page">
+    <img src="logo.png" alt="East North Enterprise Logo" />
+  </a>
   <div class="header-container">
     <h1>EAST NORTH ENTERPRISE LLC</h1>
-    <img src="logo.png" alt="East North Enterprise Logo" class="logo"/>
   </div>
   <p>Professional Lawn Care &amp; Home Remodeling<br>In South Carolina</p>
 </header>
@@ -274,7 +296,7 @@
 
 <section class="photo-demo" aria-label="Home Remodeling Photo Demonstrations">
   <figure>
-    <img src=""C:\Users\admin\Downloads\east-north-enterprise-images\kitchen-remodel.webp"" alt="Modern kitchen remodeling" />
+    <img src="C:\Users\admin\Downloads\east-north-enterprise-images\kitchen-remodel.webp" alt="Modern kitchen remodeling" />
     <figcaption>Kitchen Remodeling</figcaption>
   </figure>
   <figure>
