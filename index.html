@@ -184,34 +184,43 @@
       }
     }
   </style>
+  <script>
+    // Fix for mobile: force scroll to top on load
+    window.addEventListener('load', () => {
+      window.scrollTo(0, 0);
+    });
+  </script>
 </head>
 <body>
-<header>
-  <div class="header-container">
-    <h1>EAST NORTH ENTERPRISE LLC</h1>
-    <img src="logo.png" alt="East North Enterprise Logo" class="logo"/>
-  </div>
-  <p>Professional Lawn Care &amp; Home Remodeling<br>In South Carolina</p>
-</header>
+  <header>
+    <div class="header-container">
+      <h1>EAST NORTH ENTERPRISE LLC</h1>
+      <img src="logo.png" alt="East North Enterprise Logo" class="logo"/>
+    </div>
+    <p>Professional Lawn Care &amp; Home Remodeling<br>In South Carolina</p>
+  </header>
 
-<nav>
-  <a href="mailto:thedjbenterprise@gmail.com" style="color:#d4af37;">Email Us For a Quote</a>
-</nav>
+  <nav>
+    <a href="mailto:thedjbenterprise@gmail.com" style="color:#d4af37;">Email Us For a Quote</a>
+  </nav>
 
-<section class="additional-services">
-  <label for="services-dropdown">Explore Additional Services</label>
-  <select id="services-dropdown" onchange="if(this.value) window.location.href=this.value;">
-    <option value="">Select a service...</option>
-    <option value="#lawn">Lawn Services Overview</option>
-    <option value="#remodel">Home Remodeling Overview</option>
-    <option value="#lawn">Lawn Fertilization</option>
-    <option value="#lawn">Lawn Aeration</option>
-    <option value="#lawn">Pest Control</option>
-    <option value="#remodel">Kitchen Remodeling</option>
-    <option value="#remodel">Bathroom Remodeling</option>
-    <option value="#remodel">Basement Finishing</option>
-  </select>
-</section>
+  <section class="additional-services">
+    <label for="services-dropdown">Explore Additional Services</label>
+    <select id="services-dropdown" onchange="if(this.value) window.location.href=this.value;">
+      <option value="">Select a service...</option>
+      <option value="#lawn">Lawn Services Overview</option>
+      <option value="#remodel">Home Remodeling Overview</option>
+      <option value="#lawn">Lawn Fertilization</option>
+      <option value="#lawn">Lawn Aeration</option>
+      <option value="#lawn">Pest Control</option>
+      <option value="#remodel">Kitchen Remodeling</option>
+      <option value="#remodel">Bathroom Remodeling</option>
+      <option value="#remodel">Basement Finishing</option>
+    </select>
+  </section>
+
+  <!-- Keep the rest of your existing HTML content below unchanged -->
+  <!-- ... (Lawn Care, Additional Services, Remodeling, Photo Demos, Footer, etc.) -->
 
 <section id="lawn">
   <h2 style="text-align:center;">Lawn Care Services</h2>
